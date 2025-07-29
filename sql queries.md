@@ -93,7 +93,7 @@ WHERE store_id NOT IN (
 ```sql
 SELECT 
 	ROUND(
-		(COUNT(claim_id)/(SELECT COUNT(*) FROM warranty)) * 100, 2
+		(COUNT(claim_id) * 100 /(SELECT COUNT(*) FROM warranty)), 2
 	) as warranty_void_percentage
 FROM warranty
 WHERE repair_status = 'Warranty Void';
