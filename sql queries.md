@@ -75,7 +75,7 @@ ORDER BY total_unit_sold DESC;
 SELECT 
 	COUNT(sale_id) as total_sale 
 FROM sales
-WHERE DATE_FORMAT(sale_date, '%m-%Y') = '12-2023';
+WHERE sale_date BETWEEN '2023-12-01' AND '2023-12-31';
 ```
 
 #### Q.4 Determine how many stores have never had a warranty claim failed.
