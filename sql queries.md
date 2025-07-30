@@ -19,11 +19,8 @@ SELECT DISTINCT repair_status FROM warranty;
 SELECT COUNT(*) FROM sales;
 ```
 
-###### Improving Query Performance 
 
--- et - 64.ms
--- pt - 0.15ms
--- et after index 5-10 ms
+
 
 ```sql
 EXPLAIN
@@ -37,10 +34,6 @@ CREATE INDEX sales_sale_date ON sales(sale_date);
 ```
 
 
--- et - 58.ms
--- pt - 0.069
--- et after index 2 ms
-```sql
 
 EXPLAIN
 SELECT * FROM sales
