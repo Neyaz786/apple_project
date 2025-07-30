@@ -13,35 +13,8 @@ SELECT * FROM sales;
 SELECT * FROM warranty;
 
 ```
-##### EDA
-```sql
-SELECT DISTINCT repair_status FROM warranty;
-SELECT COUNT(*) FROM sales;
-```
 
-
-
-
-```sql
-EXPLAIN
-SELECT * FROM sales
-WHERE product_id ='P-44';
-
-CREATE INDEX sales_product_id ON sales(product_id);
-CREATE INDEX sales_store_id ON sales(store_id);
-CREATE INDEX sales_sale_date ON sales(sale_date);
-
-```
-
-
-
-EXPLAIN
-SELECT * FROM sales
-WHERE store_id = 'ST-31';
-```
-
-
-#### 1. Find the number of stores in each country.
+#### Q.1 Find the number of stores in each country.
 ```sql
 SELECT 
 	country,
@@ -49,7 +22,6 @@ SELECT
 FROM stores
 GROUP BY country
 ORDER BY total_stores DESC;
-
 ```
 
 #### Q.2 Calculate the total number of units sold by each store.
