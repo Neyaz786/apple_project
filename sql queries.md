@@ -43,7 +43,7 @@ FROM sales
 WHERE sale_date BETWEEN '2023-12-01' AND '2023-12-31';
 ```
 
-#### Q.4 Determine how many stores have never had a warranty claim failed.
+#### Q.4 Determine how many stores have never had a warranty claim .
 ```sql
 SELECT COUNT(*) FROM stores
 WHERE store_id NOT IN (
